@@ -6,7 +6,7 @@ do ->
 
   # use a mock client in TEST env, otherwise throw a real one at it
   CLIENT = if process.env.NODE_ENV is 'test'
-    { sadd: (->), hmset: (->) }
+    { sadd: (->), smembers: (->) }
   else
     require('redis').createClient()
 
