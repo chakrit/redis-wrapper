@@ -1,0 +1,9 @@
+
+# docco - generated documentation
+docs
+
+# node.js stuff
+node_modules
+npm-debug.log
+v8.log
+
