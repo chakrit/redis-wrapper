@@ -7,3 +7,7 @@ node_modules
 npm-debug.log
 v8.log
 
+# redis stuff
+dump.rdb
+appendonly.aof
+
