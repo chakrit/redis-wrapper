@@ -1,6 +1,6 @@
 {
   "name": "redis-wrapper",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Provides a simple class/mixin as base for when you need to wraps a redis client (or provide API that does) via a use() method",
   "main": "index.js",
   "scripts": {
