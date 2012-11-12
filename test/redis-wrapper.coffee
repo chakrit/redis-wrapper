@@ -40,7 +40,11 @@ do ->
         @use CLIENT
         expect(@instance.client).to.eq(CLIENT)
 
-      it "should throws when given something that doesn't looks like a redis client.", ->
+      it 'should unsets the client property when given null', ->
+        expect(=> @use null).to.not.throw()
+        expect(@instance.client).to.be.null
+
+      it "should throws when given something non-null that doesn't looks like a redis client.", ->
         expect(=> @use { }).to.throw(@klass.RedisWrapperError)
 
     describe 'RedisWrapperError class', ->

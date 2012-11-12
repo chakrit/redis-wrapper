@@ -11,7 +11,7 @@ module.exports = do ->
   class RedisWrapper
     client: null
     use: (client) =>
-      unless 'sadd' of client and 'smembers' of client
+      unless not client or 'sadd' of client and 'smembers' of client
         throw new RedisWrapperError('Object does not looks like a redis client.')
       @client = client
 
